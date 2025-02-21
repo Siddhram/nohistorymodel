@@ -24,8 +24,15 @@ app.post('/chat', async (req, res) => {
       return res.status(400).json({ error: "'prompt' must be a non-empty string." });
     }
 
+    // Custom message for fake news detection
+    const systemMessage = {
+      role: 'system',
+      content: "If the user mentions encountering fake news, provide multiple ethical ways they can take action. Suggest verifying sources, reporting to authorities, educating others, and promoting media literacy."
+    };
+
     // Convert the prompt to the expected `messages` array
     const messages = [
+      systemMessage,
       { role: 'user', content: prompt }
     ];
 
