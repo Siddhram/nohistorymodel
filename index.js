@@ -27,7 +27,7 @@ app.post('/chat', async (req, res) => {
     // Custom message for fake news detection
     const systemMessage = {
       role: 'system',
-      content: "If the user mentions encountering fake news, provide multiple ethical ways they can take action. Suggest verifying sources, reporting to authorities, educating others, and promoting media literacy."
+      content: "If the user mentions encountering fake news, provide multiple ethical ways they can take action. Suggest verifying sources, reporting to authorities, educating others, and promoting media literacy give in short."
     };
 
     // Convert the prompt to the expected `messages` array
